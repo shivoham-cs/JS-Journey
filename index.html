@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS Journey 🚀</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #58a6ff;
+    }
+    a {
+      color: #79c0ff;
+    }
+    pre {
+      background: #161b22;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    code {
+      color: #d2a8ff;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #30363d;
+      margin: 30px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>📘 JS Journey</h1>
+  <p>A step-by-step guide through JavaScript fundamentals — from variables to advanced DOM manipulation.</p>
+
+  <hr />
+
+  <h2>📂 Folder Structure</h2>
+  <pre>
+JS-Journey/
+├── 01-basics/
+│   ├── variables.js
+│   ├── functions.js
+│   ├── conditionals.js
+│   ├── loops.js
+│   └── README.md
+├── 02-arrays-objects/
+│   ├── arrays.js
+│   ├── objects.js
+│   └── json-practice.js
+  </pre>
+
+  <hr />
+
+  <h2>📄 Documentation</h2>
+  <p>This section dynamically shows the <code>README.md</code> content below 👇</p>
+
+  <div id="readme"></div>
+
+  <script>
+    // Fetch README.md content dynamically
+    fetch('01-basics/README.md')
+      .then(response => response.text())
+      .then(md => {
+        document.getElementById('readme').innerText = md;
+      })
+      .catch(() => {
+        document.getElementById('readme').innerHTML = "<p>README.md not found.</p>";
+      });
+  </script>
+</body>
+</html>
