@@ -45,34 +45,37 @@ This repository documents my progress, notes, and projects as I strengthen my fr
 
 ## 🗂️ Repository Structure
 
-🗂️ JS-Journey/
+```
+JS-Journey/
 │
 ├── 01-basics/
-│ ├── variables.js
-│ ├── functions.js
-│ └── loops.js
+│   ├── variables.js
+│   ├── functions.js
+│   └── loops.js
 │
 ├── 02-arrays-objects/
-│ ├── arrays.js
-│ ├── objects.js
-│ └── json-practice.js
+│   ├── arrays.js
+│   ├── objects.js
+│   └── json-practice.js
 │
 ├── 03-dom/
-│ ├── selectors.js
-│ ├── events.js
-│ └── mini-project-dom.html
+│   ├── selectors.js
+│   ├── events.js
+│   └── mini-project-dom.html
 │
 ├── 04-async/
-│ ├── fetch-api.js
-│ └── async-await.js
+│   ├── fetch-api.js
+│   └── async-await.js
 │
 ├── projects/
-│ ├── to-do-list/
-│ ├── weather-app/
-│ ├── expense-tracker/
-│ └── quiz-app/
+│   ├── to-do-list/
+│   ├── weather-app/
+│   ├── expense-tracker/
+│   └── quiz-app/
 │
 └── README.md
+
+```
 
 ---
 
