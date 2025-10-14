@@ -44,3 +44,55 @@ This repository documents my progress, notes, and projects as I strengthen my fr
 ---
 
 ## 🗂️ Repository Structure
+
+🗂️ JS-Journey/
+│
+├── 01-basics/
+│ ├── variables.js
+│ ├── functions.js
+│ └── loops.js
+│
+├── 02-arrays-objects/
+│ ├── arrays.js
+│ ├── objects.js
+│ └── json-practice.js
+│
+├── 03-dom/
+│ ├── selectors.js
+│ ├── events.js
+│ └── mini-project-dom.html
+│
+├── 04-async/
+│ ├── fetch-api.js
+│ └── async-await.js
+│
+├── projects/
+│ ├── to-do-list/
+│ ├── weather-app/
+│ ├── expense-tracker/
+│ └── quiz-app/
+│
+└── README.md
+
+---
+
+## 🧠 Notes
+- Committing daily or weekly to maintain consistency  
+- Writing brief summaries in each folder about what I learned  
+- Using this repo as a personal reference and portfolio  
+
+---
+
+## 💬 Connect with Me
+If you’d like to contact with me or share resources, feel free to connect!  
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/shivoham-cs/)
+[![Instagram](https://img.shields.io/badge/Instagram-purple?style=for-the-badge&logo=instagram)](https://www.instagram.com/shivoham_cs)
+[![Portfolio (coming soon)](https://img.shields.io/badge/Portfolio-coming%20soon-lightgrey?style=for-the-badge&logo=firefox)](#)
+
+---
+
+⭐ **Star this repo** if you’re also learning JavaScript — let’s grow together!
+
+## License
+MIT © 2025 Shivoham-CS
