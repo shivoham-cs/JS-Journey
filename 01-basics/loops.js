@@ -108,15 +108,57 @@ for (let i = 1; i <= 10; i++) {
 // ✅ Avoid deeply nested loops if possible
 // ✅ Use 'break' & 'continue' wisely
 // ✅ Prefer array methods (map, filter, forEach) for cleaner code
-// (We'll cover these in Array lessons)
 
 // --------------------------------------
 // 🧩 Mini Challenges:
 // 1. Print numbers from 1–50; skip multiples of 5.
+console.log("Q1. Print numbers from 1–50; skip multiples of 5.")
+let an = 1;
+for (an = 1; an <= 50; an++) {
+  if (an % 5 == 0) {
+    continue;
+  }
+  console.log(an);
+}
 // 2. Sum all even numbers from 1–20.
+console.log("Q2. Sum all even numbers from 1–20.")
+let sumEven = 0;
+let ev = 1;
+for (ev = 1; ev <= 20; ev++) {
+  if (ev % 2 != 0) {
+    continue;
+  }
+  sumEven += ev;
+}
+console.log(sumEven);
 // 3. Create a multiplication table (1–10).
+console.log("Q3. Create a multiplication table (1–10).")
+for (let tbr = 1; tbr <= 10; tbr++) {
+  for (let tbc = 1; tbc <= 10; tbc++) {
+    console.log(`${tbr} × ${tbc} = ${tbr * tbc}`);
+  }
+  console.log("------------");
+}
 // 4. Loop through an object and print key-value pairs.
+console.log("Students and their favourite subjects-")
+let students = {
+  Raman : "Maths",
+  Sohan : "Science",
+  Mohan : "Economics"
+}
+
+for (let student in students) {
+  console.log(`${student} : ${students[student]}`)
+}
 // 5. Use nested loops to print a simple pattern like:
+console.log("Star Print-")
+for (let sr = 1; sr <= 5; sr++){
+  let row = "";
+  for (let sro = 1; sro <= sr; sro++) {
+    row += "* "
+  }
+  console.log(row)
+}
 //
 // *
 // * *
