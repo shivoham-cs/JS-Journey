@@ -51,6 +51,7 @@ JS-Journey/
 ├── 01-basics/
 │   ├── variables.js
 │   ├── functions.js
+│   ├── conditionals.js
 │   └── loops.js
 │
 ├── 02-arrays-objects/
