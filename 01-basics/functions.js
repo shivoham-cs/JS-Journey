@@ -155,6 +155,21 @@ setTimeout(function () {
 // 🧩 Mini Challenge:
 // 1. Create a function that takes a name and age, and returns:
 //    "Hi <name>, you are <age> years old."
-// 2. Create a function to calculate the square of a number.
+function getInfo (name, age) {
+  console.log(`Hi ${name}, you are ${age} years old.`)
+}
+
+getInfo("Shiv", 21)
+// 2. Create a function to calculate the square root of a number.
+function calcSq (num) {
+  console.log(Math.sqrt(num))
+}
+
+calcSq(625);
 // 3. Use an arrow function to calculate the cube of a number.
+const nCube = num => num * num * num;
+console.log(nCube(5));
 // 4. Create an IIFE that prints your current learning topic.
+(function () {
+  console.log("Current topic is funtions.js");
+})();
