@@ -177,6 +177,69 @@ switch (browser) {
 // 🧩 Mini Challenge:
 // 1. Create a variable for time (0–23). 
 //    Use if...else to print "Good Morning", "Good Afternoon", or "Good Night".
+let time = 3;
+if (time > 4 && time < 12){
+  console.log("Good Morning")
+}else if (time > 12 && time < 18) {
+  console.log("Good Afternoon")
+}else if (time > 18 && time <= 23){
+  console.log("Good Night")
+}else if (time >= 0 && time < 4) {
+  console.log("Not a valid time to wish, Go and Sleep.")
+}else {
+  console.log("Enter a valid time.")
+}
 // 2. Use switch to print the name of a month from its number.
+let monthNum = 120;
+switch (monthNum) {
+  case 1:
+    console.log("January")
+    break;
+  case 2:
+    console.log("Febuary")
+    break;
+  case 3:
+    console.log("March")
+    break;
+  case 4:
+    console.log("April")
+    break;
+  case 5:
+    console.log("May")
+    break;
+  case 6:
+    console.log("June")
+    break;
+  case 7:
+    console.log("July")
+    break;
+  case 8:
+    console.log("August")
+    break;
+  case 9:
+    console.log("September")
+    break;
+  case 10:
+    console.log("October")
+    break;
+  case 11:
+    console.log("November")
+    break;
+  case 12:
+    console.log("December")
+    break;
+  default:
+    console.log("Please enter a valid month number.")
+    break;
+}
 // 3. Use a ternary operator to check if a number is even or odd.
+let num = 56465464;
+let checkNum = num % 2 === 0 ? "Even" : "Odd";
+console.log(checkNum)
 // 4. Practice short-circuit logic with default usernames.
+let userNm = "Shiv";
+let getNm = userNm || "Guest";
+console.log("Hey", getNm);
+
+
+
