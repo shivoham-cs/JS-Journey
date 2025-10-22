@@ -5,73 +5,294 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JS Journey 🚀</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: "Segoe UI", Tahoma, sans-serif;
       background: #0d1117;
       color: #c9d1d9;
-      padding: 40px;
+      padding: 40px 20px;
       line-height: 1.6;
     }
-    h1, h2, h3 {
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
       color: #58a6ff;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #21262d;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #58a6ff;
+      font-size: 1.8em;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+    h3 {
+      color: #79c0ff;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 15px;
     }
     a {
       color: #79c0ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
     pre {
       background: #161b22;
-      padding: 12px;
+      padding: 16px;
       border-radius: 8px;
       overflow-x: auto;
+      margin: 15px 0;
+      border: 1px solid #30363d;
     }
     code {
       color: #d2a8ff;
+      font-family: 'Courier New', monospace;
     }
     hr {
       border: none;
       border-top: 1px solid #30363d;
       margin: 30px 0;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #161b22;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #30363d;
+    }
+    th {
+      background: #21262d;
+      color: #58a6ff;
+      font-weight: 600;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    ul, ol {
+      margin-left: 30px;
+      margin-bottom: 15px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    strong {
+      color: #f0f6fc;
+      font-weight: 600;
+    }
+    .badge-container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .badge-container img {
+      height: 28px;
+    }
+    blockquote {
+      border-left: 4px solid #58a6ff;
+      padding-left: 16px;
+      margin: 15px 0;
+      color: #8b949e;
+    }
   </style>
 </head>
 <body>
-  <h1>📘 JS Journey</h1>
-  <p>A step-by-step guide through JavaScript fundamentals — from variables to advanced DOM manipulation.</p>
+  <div class="container" id="content"></div>
 
-  <hr />
+  <script>
+    const markdown = `# 🧠 JS-Journey
+Welcome to my **JavaScript learning journey!**  
+This repository documents my progress, notes, and projects as I strengthen my frontend development skills in 2025.
 
-  <h2>📂 Folder Structure</h2>
-  <pre>
+---
+
+## 🚀 Goals
+- Re-learn and master core JavaScript concepts  
+- Build small projects to apply each concept  
+- Learn modern ES6+ features  
+- Get comfortable with DOM manipulation, APIs, and eventually React.js  
+- Maintain a consistent learning & coding habit  
+
+---
+
+## 📆 Learning Plan (Outline)
+| Week | Focus Area | Key Topics |
+|------|-------------|------------|
+| 1 | JS Basics | Variables, Data Types, Loops, Functions |
+| 2 | Arrays & Objects | Methods, Manipulation, JSON |
+| 3 | DOM Manipulation | Selectors, Events, Interactivity |
+| 4 | Async JS | Fetch API, Promises, Async/Await |
+| 5 | Review + React Prep | ES6+, Modular JS, Mini Projects |
+
+---
+
+## 🧩 Mini Projects
+| # | Project | Description | Status |
+|---|----------|-------------|--------|
+| 1 | Console Exercises | FizzBuzz, Calculator, Palindrome Checker | 🔄 |
+| 2 | To-Do List | Add/Delete tasks using DOM | ⏳ |
+| 3 | Quiz App | DOM + Event Handling | ⏳ |
+| 4 | Weather App | Fetch API + Async JS | ⏳ |
+| 5 | Contact List | Arrays + Objects CRUD | ⏳ |
+| 6 | Expense Tracker | Local Storage + DOM | ⏳ |
+| 7 | Random Quote Generator | API Integration | ⏳ |
+| 8 | Image Gallery | DOM + Event Delegation | ⏳ |
+| 9 | Countdown Timer | Date Manipulation | ⏳ |
+| 10 | Movie Search App | React (bonus project) | ⏳ |
+
+✅ = Completed | 🔄 = In progress | ⏳ = Pending  
+
+---
+
+## 🗂️ Repository Structure
+\`\`\`
 JS-Journey/
+│
 ├── 01-basics/
 │   ├── variables.js
 │   ├── functions.js
-│   ├── conditionals.js
-│   ├── loops.js
-│   └── README.md
+│   └── loops.js
+│
 ├── 02-arrays-objects/
 │   ├── arrays.js
 │   ├── objects.js
 │   └── json-practice.js
-  </pre>
+│
+├── 03-dom/
+│   ├── selectors.js
+│   ├── events.js
+│   └── mini-project-dom.html
+│
+├── 04-async/
+│   ├── fetch-api.js
+│   └── async-await.js
+│
+├── projects/
+│   ├── to-do-list/
+│   ├── weather-app/
+│   ├── expense-tracker/
+│   └── quiz-app/
+│
+└── README.md
+\`\`\`
 
-  <hr />
+---
 
-  <h2>📄 Documentation</h2>
-  <p>This section dynamically shows the <code>README.md</code> content below 👇</p>
+## 🧠 Notes
+- Committing daily or weekly to maintain consistency  
+- Writing brief summaries in each folder about what I learned  
+- Using this repo as a personal reference and portfolio  
 
-  <div id="readme"></div>
+---
 
-  <script>
-    // Fetch README.md content dynamically
-    fetch('01-basics/README.md')
-      .then(response => response.text())
-      .then(md => {
-        document.getElementById('readme').innerText = md;
-      })
-      .catch(() => {
-        document.getElementById('readme').innerHTML = "<p>README.md not found.</p>";
+## 💬 Connect with Me
+If you'd like to contact with me or share resources, feel free to connect!  
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/shivoham-cs/)
+[![Instagram](https://img.shields.io/badge/Instagram-purple?style=for-the-badge&logo=instagram)](https://www.instagram.com/shivoham_cs)
+[![Portfolio (coming soon)](https://img.shields.io/badge/Portfolio-coming%20soon-lightgrey?style=for-the-badge&logo=firefox)](#)
+
+---
+
+⭐ **Star this repo** if you're also learning JavaScript — let's grow together!
+
+## License
+MIT © 2025 Shivoham-CS`;
+
+    function parseMarkdown(md) {
+      let html = md;
+
+      // Code blocks
+      html = html.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
+      
+      // Inline code
+      html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+      
+      // Headers
+      html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+      html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+      html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+      
+      // Bold
+      html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      
+      // Italic
+      html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+      
+      // Horizontal rules
+      html = html.replace(/^---$/gm, '<hr>');
+      
+      // Tables
+      html = html.replace(/\|(.+)\|/g, (match, content) => {
+        return '<tr>' + content.split('|').map(cell => {
+          const trimmed = cell.trim();
+          return trimmed.match(/^[-:]+$/) ? '' : `<td>${trimmed}</td>`;
+        }).join('') + '</tr>';
       });
+      html = html.replace(/(<tr>.*?<\/tr>\n?)+/g, (match) => {
+        const rows = match.split('</tr>').filter(r => r.trim());
+        if (rows.length === 0) return '';
+        const headerRow = rows[0] + '</tr>';
+        const bodyRows = rows.slice(2).map(r => r + '</tr>').join('');
+        return '<table><thead>' + headerRow.replace(/<td>/g, '<th>').replace(/<\/td>/g, '</th>') + '</thead><tbody>' + bodyRows + '</tbody></table>';
+      });
+      
+      // Links with images (badges)
+      html = html.replace(/\[!\[([^\]]+)\]\(([^)]+)\)\]\(([^)]+)\)/g, '<a href="$3" target="_blank"><img src="$2" alt="$1"></a>');
+      
+      // Regular links
+      html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+      
+      // Unordered lists
+      html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
+      html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
+      
+      // Line breaks
+      html = html.replace(/  $/gm, '<br>');
+      
+      // Paragraphs
+      html = html.split('\n\n').map(block => {
+        if (block.match(/^<(h[1-6]|hr|table|ul|ol|pre|div)/)) {
+          return block;
+        }
+        return block.trim() ? `<p>${block}</p>` : '';
+      }).join('\n');
+
+      return html;
+    }
+
+    document.getElementById('content').innerHTML = parseMarkdown(markdown);
+
+    // Wrap badges in container
+    const badges = document.querySelectorAll('p > a > img');
+    if (badges.length > 0) {
+      const parent = badges[0].parentElement.parentElement;
+      const container = document.createElement('div');
+      container.className = 'badge-container';
+      badges.forEach(badge => {
+        container.appendChild(badge.parentElement);
+      });
+      parent.replaceWith(container);
+    }
   </script>
 </body>
 </html>
