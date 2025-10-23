@@ -1,6 +1,6 @@
 # 🧠 JS-Journey
 
-Welcome to my **JavaScript learning journey!**  
+Welcome to my **[JavaScript learning journey!](https://github.com/shivoham-cs/JS-Journey)**  
 This repository documents my progress, notes, and projects as I strengthen my frontend development skills in 2025.
 
 ---
