@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* ====== GitHub-Themed Visuals ====== */
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-color: #c9d1d9;
+            --accent: #238636;
+            --accent-hover: #2ea043;
+            --delete-color: #f85149;
+            --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 270px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font);
+            margin: 0;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .intro > span {
+            font-size: 12px;
+            padding: 0;
+            margin: 0;
+            color: #8b949e;
+        }
+
+        ol#taskListMain {
+            padding-left: 0;
+            list-style-position: inside;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        .intro {
+            margin-bottom: 20px;
+            margin-top: 30vh;
+            text-align: center;
+        }
+
+        /* ====== To-Do Container ====== */
+        #toDoMain {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #initTask {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            background: #0d1117;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-size: 14px;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        input[type="text"]::placeholder {
+            color: #8b949e;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(35, 134, 54, 0.3);
+        }
+
+        button {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* ====== Task List ====== */
+        li {
+            background: #0d1117;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 6px 10px;
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            transition: background 0.2s ease;
+        }
+
+        li:hover {
+            background: #161b22;
+        }
+
+        li span {
+            color: var(--delete-color);
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        li span:hover {
+            opacity: 0.8;
+        }
+        #toDoMain {
+            margin-bottom: 20vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <h1>To-Do List</h1>
+        <span>Add/Delete tasks using DOM</span>
+    </div>
+    <div id="toDoMain">
+        <div id="initTask">
+            <input type="text" name="tasks" id="inTasks" placeholder="insert Task">
+            <button id="addTask">Add</button>
+        </div>
+        <div id="taskListCont">
+            <ol id="taskListMain"></ol>
+        </div>
+    </div>
+    <script>
+        const addTask = document.getElementById("addTask");
+        const inTasks = document.getElementById("inTasks");
+        addTask.addEventListener("click", () => {
+            const taskListMain = document.getElementById("taskListMain");
+            const listItem = document.createElement("li");
+            listItem.style.width = "234px";
+            listItem.style.marginTop = "10px";
+            listItem.textContent = inTasks.value;
+            const dlBtn = document.createElement("span");
+            dlBtn.textContent = "❌";
+            dlBtn.style.cursor = "pointer";
+            dlBtn.style.float = "inline-end";
+            if (inTasks.value === ""){
+                window.alert("Please insert a task.")
+            }else {
+                taskListMain.appendChild(listItem);
+                listItem.appendChild(dlBtn);
+            }
+            inTasks.value = "";
+            dlBtn.addEventListener("click", () => {
+                listItem.remove();
+            })
+        } )
+    </script>
+</body>
+</html>
