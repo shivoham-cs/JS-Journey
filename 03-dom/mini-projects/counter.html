@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Challenge</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-color: #c9d1d9;
+            --accent: #58a6ff;
+            --accent-hover: #79c0ff;
+            --danger: #f85149;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px 60px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        h1 {
+            color: var(--accent);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .counter {
+            font-size: 72px;
+            margin: 30px 0;
+            color: var(--accent);
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+            text-shadow: 0 0 10px rgba(88,166,255,0.3);
+        }
+
+        button {
+            font-size: 16px;
+            margin: 8px;
+            padding: 10px 22px;
+            cursor: pointer;
+            background-color: #21262d;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #30363d;
+            border-color: var(--accent);
+            color: var(--accent-hover);
+            box-shadow: 0 0 8px rgba(88,166,255,0.4);
+        }
+
+        .reset-btn {
+            color: var(--danger);
+            border-color: var(--danger);
+        }
+
+        .reset-btn:hover {
+            background-color: rgba(248,81,73,0.15);
+            box-shadow: 0 0 8px rgba(248,81,73,0.3);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 90%;
+                padding: 30px 20px;
+            }
+
+            .counter {
+                font-size: 50px;
+            }
+
+            button {
+                width: 100%;
+                margin: 6px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>COUNTER</h1>
+        <div class="counter" id="value">0</div>
+        <button onclick="decrease()">Decrease</button>
+        <button onclick="increase()">Increase</button>
+        <div style="margin-top: 10px;">
+            <button class="reset-btn" onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        let count = 0;
+        const valueDisplay = document.getElementById('value');
+
+        function decrease() {
+            count--;
+            updateDisplay();
+        }
+
+        function increase() {
+            count++;
+            updateDisplay();
+        }
+
+        function reset() {
+            count = 0;
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            valueDisplay.textContent = count;
+            valueDisplay.style.transform = "scale(1.1)";
+            setTimeout(() => valueDisplay.style.transform = "scale(1)", 100);
+        }
+    </script>
+</body>
+</html>
