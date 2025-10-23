@@ -1,4 +1,4 @@
-// 🗓️ Day 5 — Objects in JavaScript
+// 🗓️ Day 6 — Objects in JavaScript
 // ----------------------------------------------
 
 // 1️⃣ Creating Objects
