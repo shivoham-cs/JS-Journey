@@ -62,7 +62,13 @@ JS-Journey/
 ├── 03-dom/
 │   ├── selectors.js
 │   ├── events.js
-│   └── mini-project-dom.html
+│   ├── index.html
+│   ├── mini-projects/
+│   │   ├── to-do-list.html
+│   │   ├── counter.html
+│   │   ├── theme-toggle.html
+│   │   ├── quote-generator.html
+│   └── README.md
 │
 ├── 04-async/
 │   ├── fetch-api.js
