@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Quote Generator</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 420px;
+      text-align: center;
+    }
+    h2 {
+      color: #2563eb;
+    }
+    #quote {
+      font-size: 1.1rem;
+      margin: 20px 0;
+      color: #111827;
+    }
+    #author {
+      font-weight: bold;
+      color: #6b7280;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background: #2563eb;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>🧠 Random Quote</h2>
+    <p id="quote">Click below to load a quote...</p>
+    <p id="author"></p>
+    <button id="btn">Get Quote</button>
+  </div>
+
+  <script>
+    const btn = document.getElementById("btn");
+    const quoteEl = document.getElementById("quote");
+    const authorEl = document.getElementById("author");
+
+    async function getQuote() {
+      quoteEl.textContent = "Loading...";
+      authorEl.textContent = "";
+
+      try {
+        const res = await fetch("https://api.allorigins.win/get?url=https://zenquotes.io/api/random");
+        const data = await res.json();
+        const parsed = JSON.parse(data.contents)[0];
+
+        quoteEl.textContent = `"${parsed.q}"`;
+        authorEl.textContent = `— ${parsed.a}`;
+      } catch (error) {
+        quoteEl.textContent = "❌ Failed to load quote.";
+      }
+    }
+
+    btn.addEventListener("click", getQuote);
+  </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-// 🗓️ Day 12 — Async & Await
+// 🗓️ Day 12 — Error Handling same as async await
 // ----------------------------------------------
 
 async function fetchUsers() {
