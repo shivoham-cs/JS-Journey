@@ -71,8 +71,15 @@ JS-Journey/
 │   └── README.md
 │
 ├── 04-async/
+│   ├── callbacks.js
+│   ├── promises.js
 │   ├── fetch-api.js
-│   └── async-await.js
+│   ├── async-await.js
+│   ├── error-handling.js
+│   └── mini-projects/
+│       ├── random-quote.html
+│       ├── weather-app.html
+│       └── user-generator.html
 │
 ├── projects/
 │   ├── to-do-list/
