@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random User Generator</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    img {
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #10b981;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>👤 Random User</h2>
+    <img id="avatar" src="" width="100" />
+    <p id="name">Click below to load user</p>
+    <p id="email"></p>
+    <button id="loadUser">Load User</button>
+  </div>
+
+  <script>
+    const avatar = document.getElementById("avatar");
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const btn = document.getElementById("loadUser");
+
+    async function getUser() {
+      name.textContent = "Loading...";
+      email.textContent = "";
+      try {
+        const res = await fetch("https://randomuser.me/api/");
+        const data = await res.json();
+        const user = data.results[0];
+        avatar.src = user.picture.large;
+        name.textContent = `${user.name.first} ${user.name.last}`;
+        email.textContent = user.email;
+      } catch {
+        name.textContent = "Failed to load user.";
+      }
+    }
+
+    btn.addEventListener("click", getUser);
+    
+  </script>
+</body>
+</html>
