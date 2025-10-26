@@ -3,6 +3,8 @@
 A sleek and minimal **Weather App** built with pure **HTML, CSS, and JavaScript** — inspired by the **GitHub Dark Theme**.  
 It uses the [OpenWeather API](https://openweathermap.org/api) to fetch real-time weather data for any city or ZIP code.
 
+**[Preview](https://shivoham-cs.github.io/JS-Journey/projects/weather-app/)**
+
 ---
 
 ## 🚀 Features
