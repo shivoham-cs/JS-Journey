@@ -4,27 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balance History</title>
+    <title>Transaction History</title>
     <link rel="stylesheet" href="../github-like.min.css">
+    <style>
+        .dated {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            float: inline-end;
+        }
+
+        .dscp {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 12px;
+            margin-left: 8px;
+        }
+
+        .otOP {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #tHist {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin: auto;
+            padding: 3px;
+            max-width: 700px;
+        }
+
+        .axCol {
+            margin-bottom: 15px;
+        }
+
+        section {
+            margin-bottom: 5vh;
+        }
+    </style>
 </head>
 
 <body>
     <header class="gh-header">
-        <div id="tHead" class="gh-logo">💸 Expense Tracker</div>
+        <div id="tHead" class="gh-logo">💸 Expense Tracker</div><button id="tHistBtn" style="font-size: 12px" class="gh-btn">Add Transaction</button>
     </header>
     <main>
         <section>
-            
+            <h3 style="margin: 20px; text-align: center;">Transaction History</h3>
+            <div id="tHist">
+
+            </div>
         </section>
     </main>
     <script>
         const tHead = document.getElementById("tHead");
+        const tHistBtn = document.getElementById("tHistBtn");
+        tHistBtn.style.cursor = "pointer";
         tHead.style.cursor = "pointer";
 
-        
+
         tHead.addEventListener("click", () => {
             window.location.href = "../index.html";
         })
+
+        tHistBtn.addEventListener("click", () => {
+            window.location.href = "./form.html";
+        })
+
+        document.addEventListener("DOMContentLoaded", loadTData);
     </script>
     <script src="../script.js"></script>
 </body>

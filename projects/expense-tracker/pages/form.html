@@ -7,44 +7,57 @@
     <title>Manage Expence - Form</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../github-like.min.css">
+    <style>
+        @media (prefers-color-scheme: dark) {
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                filter: invert(1);
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header class="gh-header">
-        <div id="tHead" class="gh-logo">💸 Expense Tracker</div>
+        <div id="tHead" class="gh-logo">💸 Expense Tracker</div><button id="tFormBtn" style="font-size: 12px"
+            class="gh-btn">Transactions</button>
     </header>
     <main>
         <section>
-        <div style="flex-direction: column;">
-            <h3 style="margin: 20px; text-align: center;">Manage Expance</h3>
-            <section class="tracker-form" id="add-transaction">
-                <form style="display: flex;flex-direction: column;gap:5px;">
-                    <label for="amount">Amount:</label>
-                    <input type="number" id="amount">
-                    <label for="income/expence">Choose one</label>
-                    <select id="type">
-                        <option value="income">Income</option>
-                        <option value="expense">Expense</option>
-                    </select>
-                    <label for="Select date">Choose Date</label>
-                    <input type="date" id="date">
-                    <label for="note">Add a note</label>
-                    <input type="text" id="note">
-                    <button type="submit">Add</button>
-                </form>
-                <div class="tracker-form" id="ser-msg">
-                    <span>hi</span>
-                </div>
-            </section>
-        </div>
-    </section>
+            <div style="flex-direction: column;">
+                <h3 style="margin: 20px; text-align: center;">Manage Expance</h3>
+                <section class="tracker-form" id="add-transaction">
+                    <form id="tForm" style="display: flex;flex-direction: column;gap:5px;">
+                        <label for="amount">Amount:</label>
+                        <input type="number" id="amount">
+                        <label for="income/expence">Choose one</label>
+                        <select id="type">
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                        <label for="Select date">Choose Date</label>
+                        <input type="date" id="date">
+                        <label for="note">Add a note</label>
+                        <input type="text" id="note">
+                        <button id="SbBtn" type="submit">Add</button>
+                    </form>
+                    <div class="tracker-form" id="ser-msg">
+                    </div>
+                </section>
+            </div>
+        </section>
     </main>
     <script>
         const tHead = document.getElementById("tHead");
+        const tFormBtn = document.getElementById("tFormBtn");
+        tFormBtn.style.cursor = "pointer";
         tHead.style.cursor = "pointer";
-        
+
         tHead.addEventListener("click", () => {
             window.location.href = "../index.html";
+        })
+
+        tFormBtn.addEventListener("click", () => {
+            window.location.href = "./hist.html";
         })
     </script>
     <script src="../script.js"></script>

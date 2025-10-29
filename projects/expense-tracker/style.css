@@ -1,16 +1,56 @@
 /* Overrides */
 .repo-header {
-    justify-content: center !important;
+  justify-content: center !important;
 }
+
 .gh-main {
-    grid-template-columns: 1fr !important;
+  grid-template-columns: 1fr !important;
 }
-.repo-grid{
+
+/* Default (Light Theme) */
+[data-theme="light"] input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0); /* Black icon */
+}
+
+/* Dark Theme */
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* White icon */
+}
+
+@-moz-document url-prefix() {
+    input[type="date"] {
+        background: url('data:image/svg+xml;utf8,<svg fill="gray" ...>') no-repeat right 10px center;
+        color-scheme: dark;
+    }
+
+    input[type="date"]::-moz-focus-inner {
+        border: 0;
+    }
+
+    input[type="date"]::-moz-calendar-picker-indicator {
+        opacity: 0;
+    }
+}
+
+
+@media (min-width: 501px) and (max-width: 4000px) {
+  .repo-grid {
     grid-template-columns: auto auto auto !important;
+    gap: 10px !important;
+  }
 }
-.g-auto{
-    grid-template-columns: auto !important;
+
+@media (min-width: 50px) and (max-width: 500px) {
+  .gh-act {
+    flex-direction: column;
+    gap: 10px !important;
+  }
 }
+
+.g-auto {
+  grid-template-columns: auto !important;
+}
+
 .gh-act {
   display: flex;
   justify-content: center;
@@ -24,7 +64,7 @@
   padding: 16px;
   max-width: 360px;
   display: none;
-  box-shadow: var(--shadow, 0 4px 12px rgba(0,0,0,0.3));
+  box-shadow: var(--shadow, 0 4px 12px rgba(0, 0, 0, 0.3));
   flex-direction: column;
   gap: 10px;
   margin: 20px auto;
@@ -39,7 +79,7 @@
   border-radius: 8px;
   padding: 16px;
   max-width: 360px;
-  box-shadow: var(--shadow, 0 4px 12px rgba(0,0,0,0.3));
+  box-shadow: var(--shadow, 0 4px 12px rgba(0, 0, 0, 0.3));
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -72,7 +112,7 @@
 .tracker-form input:focus,
 .tracker-form select:focus {
   border-color: var(--accent, #2f81f7);
-  box-shadow: 0 0 0 2px rgba(47,129,247,0.3);
+  box-shadow: 0 0 0 2px rgba(47, 129, 247, 0.3);
 }
 
 /* Button */
@@ -105,8 +145,6 @@
     --border: #d0d7de;
     --text: #24292f;
     --accent: #2da44e;
-    --shadow: 0 4px 12px rgba(140,149,159,0.15);
+    --shadow: 0 4px 12px rgba(140, 149, 159, 0.15);
   }
 }
-
-

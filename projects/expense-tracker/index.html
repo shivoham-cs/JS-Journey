@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expence Tracker</title>
+    <title>Expense Tracker</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="github-like.min.css">
 </head>
@@ -42,11 +42,11 @@
                         <path
                             d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z" />
                     </svg>
-                    Blance History
+                    Transaction History
                 </button>
-                <button style="display: flex;align-items: center;gap: 3px;" class="gh-btn" id="tForm">
+                <button style="display: flex;align-items: center;gap: 3px;" class="gh-btn" id="tbForm">
                     <?xml version="1.0" encoding="utf-8"?>
-                    <svg fill="var(--text)" width="18px" height="18px" viewBox="0 0 36 36" version="1.1"
+                    <svg fill="var(--text)" width="17px" height="17px" viewBox="0 0 36 36" version="1.1"
                         preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
                         <title>form-line</title>
@@ -68,7 +68,7 @@
                             class="clr-i-outline clr-i-outline-path-6"></path>
                         <rect x="0" y="0" width="36" height="36" fill-opacity="0" />
                     </svg>
-                    Tracker Form
+                    Add Transaction
                 </button>
                 <button style="display: flex;align-items: center;gap: 3px;" class="gh-btn" id="tHelp">
                     <?xml version="1.0" encoding="utf-8"?>
@@ -85,12 +85,12 @@
         </section>
     </main>
     <script>
-        const tForm = document.getElementById("tForm");
+        const tbForm = document.getElementById("tbForm");
         const bHis = document.getElementById("bHis");
         bHis.style.cursor = "pointer";
-        tForm.style.cursor = "pointer";
+        tbForm.style.cursor = "pointer";
 
-        tForm.addEventListener("click", () => {
+        tbForm.addEventListener("click", () => {
             window.location.href = "pages/form.html";
         })
 
