@@ -18,17 +18,17 @@
             <section class="repo-grid">
                 <div class="repo-card">
                     <h3>Income</h3><span></span>
-                    <span class="badge">₹ 0000</span>
+                    <span class="badge" id="totalIncome"></span>
                 </div>
 
                 <div class="repo-card">
                     <h3>Expense</h3>
-                    <span class="badge">₹ 0000</span>
+                    <span class="badge" id="totalExpense"></span>
                 </div>
 
                 <div class="repo-card">
                     <h3>Balance</h3>
-                    <span class="badge">₹ 0000</span>
+                    <span class="badge" id="totalBalance"></span>
                 </div>
             </section>
             <div
@@ -87,16 +87,21 @@
     <script>
         const tbForm = document.getElementById("tbForm");
         const bHis = document.getElementById("bHis");
-        bHis.style.cursor = "pointer";
-        tbForm.style.cursor = "pointer";
+        const tHelp = document.getElementById("tHelp");
 
         tbForm.addEventListener("click", () => {
             window.location.href = "pages/form.html";
-        })
+        });
 
         bHis.addEventListener("click", () => {
             window.location.href = "pages/hist.html";
-        })
+        });
+
+        tHelp.addEventListener("click", () => {
+            window.location.href = "pages/hist.html";
+        });
+
+        
     </script>
     <script src="script.js"></script>
 </body>

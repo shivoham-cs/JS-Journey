@@ -3,18 +3,21 @@
   justify-content: center !important;
 }
 
+.erMSG, .wrMSG, .ssMSG {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .gh-main {
   grid-template-columns: 1fr !important;
 }
 
-/* Default (Light Theme) */
 [data-theme="light"] input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(0); /* Black icon */
+    filter: invert(0);
 }
 
-/* Dark Theme */
+
 [data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1); /* White icon */
+    filter: invert(1);
 }
 
 @-moz-document url-prefix() {
@@ -138,7 +141,7 @@
 }
 
 /* Light theme (auto) */
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --bg: #ffffff;
     --panel: #f6f8fa;
@@ -147,4 +150,4 @@
     --accent: #2da44e;
     --shadow: 0 4px 12px rgba(140, 149, 159, 0.15);
   }
-}
+} */
