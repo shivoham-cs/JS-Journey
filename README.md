@@ -33,7 +33,7 @@ This repository documents my progress, notes, and projects as I strengthen my fr
 | 3 | Quiz App | DOM + Event Handling | ⏳ |
 | 4 | Weather App | Fetch API + Async JS | ✅ |
 | 5 | Contact List | Arrays + Objects CRUD | ⏳ |
-| 6 | Expense Tracker | Local Storage + DOM | ⏳ |
+| 6 | Expense Tracker | Local Storage + DOM | ✅ |
 | 7 | Random Quote Generator | API Integration | ⏳ |
 | 8 | Image Gallery | DOM + Event Delegation | ⏳ |
 | 9 | Countdown Timer | Date Manipulation | ⏳ |
